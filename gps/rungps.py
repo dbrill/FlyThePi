@@ -21,7 +21,7 @@ class GpsPoll(threading.Thread):
  
   def run(self):
     global gpsd
-    while gpsp.running:
+    while gpspoll.running:
       gpsd.next() #Gets the next set of data and clears the buffer
  
 if __name__ == '__main__':
@@ -40,7 +40,7 @@ if __name__ == '__main__':
       print 'Longitude:   ' , gpsd.fix.longitude
       print 'Time UTC:    ' , gpsd.utc,' + ', gpsd.fix.time
       print 'Altitude (m)' , gpsd.fix.altitude
-'''      print 'Eps         ' , gpsd.fix.eps
+      '''      print 'Eps         ' , gpsd.fix.eps
       print 'Epx         ' , gpsd.fix.epx
       print 'Epv         ' , gpsd.fix.epv
       print 'Ept         ' , gpsd.fix.ept '''
@@ -55,6 +55,6 @@ if __name__ == '__main__':
  
   except (KeyboardInterrupt, SystemExit): # Control-C functionality
     print "\nKilling Thread..."
-    gpsp.running = False
-    gpsp.join() # Wait for the thread to finish.
+    gpspoll.running = False
+    gpspoll.join() # Wait for the thread to finish.
   print "Exiting..."
