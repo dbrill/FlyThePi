@@ -27,7 +27,7 @@ class GpsPoll(threading.Thread):
 if __name__ == '__main__':
   gpspoll = GpsPoll() # Thread creation
   try:
-    gpspoll.start() 
+    gpspoll.run() 
     while True:
       # Wait a few seconds to get accurate data
  
