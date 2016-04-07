@@ -9,6 +9,7 @@
 Explanation: Used the Python unittest module to handle our automated testing.
 
 Usage: ```python rungps_test.py```
+__Make sure__ ```rungps.py``` is in your current working directory.
 
 Output:
 
