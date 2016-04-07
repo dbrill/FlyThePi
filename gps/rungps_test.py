@@ -54,5 +54,7 @@ class RungpsTestCase(unittest.TestCase):
         gpspoll = rungps.GpsPoll()
         self.assertGreater(-102, gpspoll.getLongitude(), "GPS is East of CO")
 
-
+# Main: Run Test Cases
+if __name__ == '__main__':
+    unittest.main()
 
