@@ -13,7 +13,7 @@ Usage: ```python rungps_test.py```
 Output:
 
 ```
-user@cu-cs-vm:~/Dropbox/SP2016/3308/Group Project$ python rungps_test.py 
+user@cu-cs-vm:$ python rungps_test.py 
 
 EF..EFFF.
 ======================================================================
