@@ -24,7 +24,7 @@ class RungpsTestCase(unittest.TestCase):
 
     def test_HeightValue(self):
         gpspoll = rungps.GpsPoll()
-        self.assertNotEqual(gpspoll.getHeight(), nan, "GPS isn't returning height")
+        self.assertNotEqual(gpspoll.getHeight(), "nan", "GPS isn't returning height")
 
     def test_LowerHeightLimit(self):
         gpspoll = rungps.GpsPoll()
@@ -36,7 +36,7 @@ class RungpsTestCase(unittest.TestCase):
 
     def test_PositionValue(self):
         gpspoll = rungps.GpsPoll()
-        self.assertNotEqual(gpspoll.running, (nan, nan), "GPS isn't returning coordinates")
+        self.assertNotEqual(gpspoll.running, ("nan", "nan"), "GPS isn't returning coordinates")
 
     def test_LowerLatitudeLimit(self):
         gpspoll = rungps.GpsPoll()
