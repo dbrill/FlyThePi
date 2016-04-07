@@ -27,7 +27,7 @@ class GpsPoll(threading.Thread):
         if __name__ == '__main__':
             gpspoll = GpsPoll() # Thread creation
             try:
-                gpspoll.run()
+                gpspoll.start()
                 while True:
                     # Wait a few seconds to get accurate data
 
@@ -57,7 +57,13 @@ class GpsPoll(threading.Thread):
                 print "Exiting..."
 
         def getHeight(self):
-            return gpsd.fix.altitutde
+            return gpsd.fix.altitude
+        
+        def getLatitude(self):
+            return gpsd.fix.latitude
+
+        def getLongitude(self):
+            return gpsd.fix.longitude
 
         def getPosition(self):
             return (gpsd.fix.latitude, gpsd.fix.longitude)
@@ -68,7 +74,7 @@ class GpsPoll(threading.Thread):
         def getClimb(self):
             return gpsd.fix.climb
 
-        def getTrack:
+        def getTrack(self):
             return gpsd.fix.track
 
 
