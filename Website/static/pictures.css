@@ -1,142 +1,155 @@
 body {
-        background-image:url(https://i.ytimg.com/vi/KGLB9-LdpYM/maxresdefault.jpg)
+        background-color: black;
 }
 
 #two {
-	height: 150px;
-        width: 300px;
+	height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-	margin-left: 918px;
+        margin-top: 100px;
+	margin-left: 170px;
 	position: absolute;
 }
 
 #three {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 168px;
-        margin-left: 918px;
+        margin-top: 650px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #four {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 336px;
-        margin-left: 918px;
+        margin-top: 1200px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #five {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 504px;
-        margin-left: 918px;
+        margin-top: 1750px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #six {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 672px;
-        margin-left: 918px;
+        margin-top: 2300px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #seven {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 840px;
-        margin-left: 918px;
+        margin-top: 2850px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #eight {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1008px;
-        margin-left: 918px;
+        margin-top: 3400px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #nine {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1176px;
-        margin-left: 918px;
+        margin-top: 3950px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #ten {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1344px;
-        margin-left: 918px;
+        margin-top: 4500px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #eleven {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1512px;
-        margin-left: 918px;
+        margin-top: 5050px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #twelve {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1680px;
-        margin-left: 918px;
+        margin-top: 5600px;
+        margin-left: 170px;
         position: absolute;
 }
 
 #thirteen {
-        height: 150px;
-        width: 300px;
+        height: 500px;
+        width: 900px;
         border: 2px solid white;
         background-color: #000000;
-        margin-top: 1848px;
-        margin-left: 918px;
+        margin-top: 6150px;
+        margin-left: 170px;
         position: absolute;
 }
 
 ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        background-color: #f1f1f1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    float: left;
 }
 
 li a {
-        display: block;
-        color: #000000;
-        padding: 8px 0px 8px 16px;
-        text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvetica;
 }
 
 li a:hover {
-        background-color: #808080;
+    background-color: #111;
+}
+
+.active {
+        background-color: #111;
         color: white;
 }
