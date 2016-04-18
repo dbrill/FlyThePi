@@ -7,6 +7,7 @@ Begin by activating the virtual environment to load in necessary dependencies:
 Move to Website directory and run the flaskapp:
 
 	`cd Website`
+	
 	`python flaskapp.py`
 
 
