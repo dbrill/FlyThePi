@@ -2,12 +2,12 @@
 
 Begin by activating the virtual environment to load in necessary dependencies:
 
-	`source flask/bin/activate`     (From the root directory)
+```source flask/bin/activate```     (From the root directory)
 
 Move to Website directory and run the flaskapp:
 
-	`cd Website`
+```cd Website```
 	
-	`python flaskapp.py`
+```python flaskapp.py```
 
 
