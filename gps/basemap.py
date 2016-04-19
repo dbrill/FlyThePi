@@ -2,6 +2,7 @@ from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
+import os
 
 #llcrnr = lower left corner
 #urcrnr = upper right corner
@@ -30,10 +31,12 @@ with open("collect.csv", "rb") as f:
 #lat = 40.0100
 #lon = -105.2705
 
+RGB = (0.0,0.0,0.0)
 #skips the first row to take into account the header strings
 for i in range(1,len(lats)):
 	x,y = my_map(float(lons[i]),float(lats[i]))
-	my_map.plot(x,y,marker="*",color="c")
+	my_map.plot(x,y,marker="*",color=RGB)
+	RGB = ((RGB[0] +.05)%1,(RGB[1] +.05)%1,(RGB[2] +.05)%1)  #messing around with colors of points
 
 #to add text to the map at coords x,y:
 #plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
@@ -44,11 +47,12 @@ my_map.imshow(im, interpolation='lanczos', origin='upper')
 
 plt.title("Where is our Pi?")
 
+#remove old image
+if os.path.isfile("map.png"):
+	os.remove("map.png")
+#save new image 
+plt.savefig("map.png")
+
 plt.show()
-
-
-#need to save the figure somehow
-#plt.savefig("Map.png")
-
 
 
