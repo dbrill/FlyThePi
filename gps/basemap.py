@@ -35,11 +35,10 @@ RGB = (0.0,0.0,0.0)
 #skips the first row to take into account the header strings
 for i in range(1,len(lats)):
 	x,y = my_map(float(lons[i]),float(lats[i]))
-	my_map.plot(x,y,marker="o",color=RGB)
-	RGB = ((RGB[0] +.05)%1,(RGB[1] +.05)%1,(RGB[2] +.05)%1)  #messing around with colors of points
+	my_map.plot(x,y,marker="o",color='b')
 
 #to add text to the map at coords x,y:
-#plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
+plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
 
 #background.png image is from openstreetmap with corner coords from above
 im = plt.imread('background.png')
