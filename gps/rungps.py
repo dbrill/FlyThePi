@@ -50,7 +50,7 @@ if __name__ == '__main__':
     gpspoll = GpsPoll() # Thread creation
     try:
         gpspoll.start()
-	csvdata = csv.writer(open("collect.csv", "wb"))
+	csvdata = csv.writer(open("collect_test.csv", "wb"))
 	csvdata.writerow(["Latitude", "Longitude", "UTC Time", "Elevation", "Speed", "Heading"])
         while True:
             # Wait a few seconds to get accurate data
