@@ -36,7 +36,7 @@ plt.ylabel('Meters')
 plt.title('Elevation')
 
 plt.subplot(212)
-plt.plot(time, new_speed, 'ro')
+plt.plot(time, new_speed, 'r')
 plt.xlabel('Time (Seconds)')
 plt.ylabel('Meters/Second')
 plt.title('Speed')
