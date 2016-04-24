@@ -38,7 +38,7 @@ for i in range(1,len(lats)):
 	my_map.plot(x,y,marker="o",color='b')
 
 #to add text to the map at coords x,y:
-plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
+#plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
 
 #background.png image is from openstreetmap with corner coords from above
 im = plt.imread('background.png')

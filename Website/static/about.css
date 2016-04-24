@@ -12,6 +12,7 @@ body {
 	position: absolute;
 	color: white;
 	text-decoration: none;
+	text-align: center;
 	font-family: Helvetica;
 }
 
@@ -20,7 +21,7 @@ body {
 	width: 900px;
 	border: 2px solid white;
 	background-color: #000000;
-	margin-top: 250px;
+	margin-top: 200px;
 	margin-left: 100px;
 	position: absolute;
 	color: white;
