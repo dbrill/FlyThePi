@@ -36,7 +36,7 @@ RGB = (0.0,0.0,0.0)
 #skips the first row to take into account the header strings
 for i in range(1,len(lats)):
 	x,y = my_map(float(lons[i]),float(lats[i]))
-	my_map.plot(x,y,marker=(3, 0, (float(direction[i])+180)), color='b', markersize = 2)
+	my_map.plot(x,y,marker=(3, 0, (float(direction[i])+180)), color='b', markersize = 8)
 
 #to add text to the map at coords x,y:
 #plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
