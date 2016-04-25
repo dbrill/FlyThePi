@@ -20,24 +20,26 @@ my_map = Basemap(llcrnrlon= llcrnrlon, urcrnrlat= urcrnrlat, urcrnrlon= urcrnrlo
 lats = []
 lons = []
 direction = []
-
+speeds = []
 with open("collect.csv", "rb") as f:
 	reader = csv.reader(f,delimiter=",")
 	for row in reader:
 		lats.append(row[0])
 		lons.append(row[1])
 		direction.append(row[5])
+		speeds.append(row[4])
 
 #boulders coords:
 #lat = 40.0100
 #lon = -105.2705
 
-RGB = (0.0,0.0,0.0)
+RGB = (0.0,0.0,255.0)
 #skips the first row to take into account the header strings
 for i in range(1,len(lats)):
 	x,y = my_map(float(lons[i]),float(lats[i]))
-	my_map.plot(x,y,marker=(3, 0, (float(direction[i])+180)), color='b', markersize = 8)
-
+	RGB = ((RGB[0]+float(speeds[i])*5.0)%1, 0.0, (RGB[2] - float(speeds[i])*5.0)%1)
+	my_map.plot(x,y,marker=(3, 0, (float(direction[i])+180)), color=RGB, markersize = 8)
+	RGB = (0.0,0.0,255.0)
 #to add text to the map at coords x,y:
 #plt.text(x,y, "Boulder", fontsize=12,fontweight="bold", ha="center", va="bottom")
 
