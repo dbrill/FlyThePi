@@ -5,23 +5,27 @@ body {
 }
 
 #map {
-	height: 600px;
-    	width: 800px;
-        border: 2px solid white;
-        background-color: #000000;
-        margin-top: 100px;
-		margin-left: 230px;
-		position: absolute;
-		z-index: -1;
+		  	height: 600px;
+		    width: 800px;
+		    border: 2px solid black;
+		    background-color: #000000;
+		    margin-top: 100px;
+				margin-left: 230px;
+				position: absolute;
+				z-index: -1;
 }
 
 #data {
-        height: 800px;
-        width: 600px;
-        border: 2px solid white;
+        height: 600px;
+        width: 800px;
+        border: 2px solid black;
         background-color: #000000;
+				background-image: url(https://raw.githubusercontent.com/dbrill/FlyThePi/master/gps/stats.png);
+				background-repeat: no-repeat;
+
         margin-top: 650px;
-        margin-left: 170px;
+        margin-left: 230px;
+				margin-right: 400px;
         position: absolute;
         z-index: -1;
 }
