@@ -1,5 +1,7 @@
 body {
 	background-color: black
+	background-attachment: fixed;
+
 }
 
 #team {
@@ -7,6 +9,8 @@ body {
 	width: 900px;
 	border: 2px solid white;
 	background-color: #000000;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-top: 100px;
 	margin-left: 100px;
 	position: absolute;
@@ -20,6 +24,8 @@ body {
 	width: 900px;
 	border: 2px solid white;
 	background-color: #000000;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-top: 250px;
 	margin-left: 100px;
 	position: absolute;

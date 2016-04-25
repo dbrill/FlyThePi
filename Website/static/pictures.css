@@ -1,13 +1,14 @@
 body {
         background-color: black;
+        background-attachment: fixed;
 }
 
 #two {
 		height: 500px;
-    	width: 900px;
-        border: 2px solid white;
-        background-color: #000000;
-        margin-top: 100px;
+    width: 900px;
+    border: 2px solid white;
+    background-color: #000000;
+    margin-top: 100px;
 		margin-left: 170px;
 		position: absolute;
 		z-index: -1;
