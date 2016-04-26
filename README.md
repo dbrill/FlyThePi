@@ -1,6 +1,10 @@
 # FlyThePi
 Raspberry pi geolocated weather balloon
 
+---
+For Usage and Organization information, click [HERE](https://github.com/dbrill/FlyThePi/blob/master/INFO.md)
+---
+
 
 | Team Members      |   Github Names |
 | --- | --- |
