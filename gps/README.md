@@ -16,6 +16,6 @@ Visualization:
   - Arrows are colored by speed determined by "Speed" column of ```collect.csv```
  - ```python elevation.py``` to generate elevation and speed graphs from ```collect.csv```
  
- Testing:
+Testing:
   - ```python rungps_test.py```
   - **Tests will not pass unless gps data is being gathered**
