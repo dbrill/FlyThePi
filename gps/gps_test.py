@@ -1,24 +1,62 @@
-import gps
+import unittest
+import rungps
 
-# Listen to gpsd on port 2947
-session = gps.gps("localhost", "2947")
-session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
+class RungpsTestCase(unittest.TestCase):
 
-while True:
-	try:
-		report = session.next()
-			#Narrow fields with classes
-			#To see everything, uncomment the line below
-			#print report
-		if report['class'] == 'TPV':
-			#if hasattr(report, 'time'):
-				#print report.time
-			if hassattr(report, 'speed'):
-				print report.speed * gps.MPS_TO_KPH
-	except KeyError:
-		pass
-	except KeyboardInterrupt:
-		quit()
-	except StopIteration:
-		session = None
-		print "GPSD Timeout"
+    '''    
+	@classmethod
+        def setUpClass(cls):
+            pass
+
+        @classmethod
+        def tearDownClass(cls):
+            pass
+
+        def setUp(self):
+            pass
+
+        def tearDown(self):
+            pass
+    '''
+    
+    def test_init(self):
+    	text = "testing for null values"
+    	gpspoll = rungps.GpsPoll()
+        self.assertEqual(gpspoll.running, True, "GPS isn't running!")
+
+    def test_HeightValue(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertNotEqual(gpspoll.getHeight(), "nan", "GPS isn't returning height")
+
+    def test_LowerHeightLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertLess(0, gpspoll.getHeight(), "GPS in Australia")
+
+    def test_UpperHeightLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertGreater(321869, gpspoll.getHeight(), "GPS in Orbit")
+
+    def test_PositionValue(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertNotEqual(gpspoll.running, ("nan", "nan"), "GPS isn't returning coordinates")
+
+    def test_LowerLatitudeLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertGreater(37, gpspoll.getLatitude(), "GPS is South of CO")
+
+    def test_UpperLatitudeLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertLess(41, gpspoll.getLatitude(), "GPS is North of CO")
+
+    def test_LowerLongitudeLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertLess(-109, gpspoll.getLongitude(), "GPS is West of CO")
+
+    def test_UpperLongitudeLimit(self):
+        gpspoll = rungps.GpsPoll()
+        self.assertGreater(-102, gpspoll.getLongitude(), "GPS is East of CO")
+
+# Main: Run Test Cases
+if __name__ == '__main__':
+    unittest.main()
+

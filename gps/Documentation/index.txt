@@ -1,0 +1,30 @@
+Welcome to FlyThePi's documentation!
+====================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+.. automodule:: matplotlib
+
+.. automodule:: numpy
+
+.. automodule:: csv
+
+.. automodule:: os
+
+.. automodule:: time
+
+.. automodule:: threading
+
+.. automodule:: gps
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
